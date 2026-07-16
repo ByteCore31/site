@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Mega Hack V9</title>
-  <meta name="description" content="Mega Hack V9 — игровой помощник.">
+  <title>megahck</title>
+  <meta name="description" content="megahck — игровой помощник.">
 
   <style>
     :root {
@@ -42,8 +42,6 @@
       margin: 0 auto;
     }
 
-    /* Шапка */
-
     header {
       position: sticky;
       top: 0;
@@ -73,7 +71,13 @@
       height: 19px;
       background: var(--green);
       box-shadow: 0 0 20px rgba(185, 255, 56, 0.5);
-      clip-path: polygon(50% 0, 100% 25%, 76% 100%, 24% 100%, 0 25%);
+      clip-path: polygon(
+        50% 0,
+        100% 25%,
+        76% 100%,
+        24% 100%,
+        0 25%
+      );
     }
 
     .menu {
@@ -96,14 +100,13 @@
       border: 1px solid #3a3f49;
       border-radius: 4px;
       font-size: 13px;
+      transition: 0.2s;
     }
 
     .header-button:hover {
       color: var(--green);
       border-color: var(--green);
     }
-
-    /* Главный экран */
 
     .hero {
       min-height: 760px;
@@ -187,8 +190,6 @@
       border-color: var(--green);
     }
 
-    /* Неоновый шар */
-
     .decoration {
       width: 450px;
       height: 450px;
@@ -260,8 +261,6 @@
       background: var(--green);
     }
 
-    /* Статистика */
-
     .stats {
       background: #0c0e11;
       border-top: 1px solid var(--border);
@@ -296,8 +295,6 @@
       letter-spacing: 2px;
       text-transform: uppercase;
     }
-
-    /* Возможности */
 
     section {
       scroll-margin-top: 80px;
@@ -361,11 +358,13 @@
       line-height: 1.7;
     }
 
-    /* Цена */
-
     .pricing {
       padding: 110px 20px;
-      background: radial-gradient(circle at 50% 5%, #1d3210, #090b09 43%);
+      background: radial-gradient(
+        circle at 50% 5%,
+        #1d3210,
+        #090b09 43%
+      );
     }
 
     .price-card {
@@ -373,7 +372,7 @@
       margin: 0 auto;
       padding: 55px;
       text-align: center;
-      background: #0f1212;
+      background: var(--panel);
       border: 1px solid #3a4732;
       box-shadow: 0 35px 100px #000;
     }
@@ -425,8 +424,6 @@
       font-size: 11px;
     }
 
-    /* Подвал */
-
     footer {
       border-top: 1px solid var(--border);
     }
@@ -442,15 +439,6 @@
       color: #626975;
       font-size: 11px;
     }
-
-    .socials {
-      display: flex;
-      gap: 20px;
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    /* Телефоны */
 
     @media (max-width: 850px) {
       .menu {
@@ -506,9 +494,10 @@
 
   <header>
     <nav class="container">
+
       <a class="logo" href="#">
         <span class="logo-icon"></span>
-        MEGA HACK V9
+        megahck
       </a>
 
       <div class="menu">
@@ -519,6 +508,7 @@
       <a class="header-button" href="#pricing">
         Получить доступ
       </a>
+
     </nav>
   </header>
 
@@ -526,7 +516,8 @@
 
     <section class="hero">
       <div class="container">
-        <div class="label">MEGA HACK V9</div>
+
+        <div class="label">megahck</div>
 
         <h1>
           ТВОЯ ИГРА.<br>
@@ -539,20 +530,32 @@
         </p>
 
         <div class="buttons">
-          <a class="button primary-button" href="ССЫЛКА_ПОКУПКИ">
+
+          <a
+            class="button primary-button"
+            href="https://funpay.com/lots/offer?id=72844091"
+          >
             Купить за 20 ₽ &nbsp; ↗
           </a>
 
-          <a class="button secondary-button" href="#features">
+          <a
+            class="button secondary-button"
+            href="#features"
+          >
             Узнать больше ↓
           </a>
+
         </div>
 
         <div class="decoration">
+
           <div class="orb"></div>
 
           <div class="control-panel">
-            <div class="panel-title">MEGA HACK V9 // CONTROL</div>
+
+            <div class="panel-title">
+              megahck // CONTROL
+            </div>
 
             <div class="panel-row">
               <span>Interface</span>
@@ -573,13 +576,17 @@
               <span>Shortcuts</span>
               <span class="switch"></span>
             </div>
+
           </div>
+
         </div>
+
       </div>
     </section>
 
     <div class="stats">
       <div class="container stats-grid">
+
         <div class="stat">
           <strong>12K+</strong>
           <span>пользователей</span>
@@ -594,10 +601,12 @@
           <strong>24/7</strong>
           <span>доступ к покупке</span>
         </div>
+
       </div>
     </div>
 
     <section class="features container" id="features">
+
       <div class="section-label">ВОЗМОЖНОСТИ</div>
 
       <h2 class="section-title">
@@ -606,8 +615,11 @@
       </h2>
 
       <div class="cards">
+
         <article class="card">
+
           <span class="card-number">01</span>
+
           <div class="card-icon">⌁</div>
 
           <h3>Точный контроль</h3>
@@ -616,10 +628,13 @@
             Настраивай игровой процесс под себя:
             горячие клавиши, профили и быстрый доступ.
           </p>
+
         </article>
 
         <article class="card">
+
           <span class="card-number">02</span>
+
           <div class="card-icon">◇</div>
 
           <h3>Чистый интерфейс</h3>
@@ -628,13 +643,20 @@
             Компактное меню не перекрывает игру
             и остаётся понятным с первого запуска.
           </p>
+
         </article>
+
       </div>
+
     </section>
 
     <section class="pricing" id="pricing">
+
       <div class="price-card">
-        <div class="section-label">ПОЖИЗНЕННАЯ ЛИЦЕНЗИЯ</div>
+
+        <div class="section-label">
+          ПОЖИЗНЕННАЯ ЛИЦЕНЗИЯ
+        </div>
 
         <h2>
           Один платёж.<br>
@@ -653,33 +675,34 @@
 
         <a
           class="button primary-button full-width"
-          href="ССЫЛКА_ПОКУПКИ"
+          href="https://funpay.com/lots/offer?id=72844091"
         >
-          Получить Mega Hack V9 &nbsp; ↗
+          Получить megahck &nbsp; ↗
         </a>
 
         <p class="note">
           Цифровой товар · Мгновенная доставка
         </p>
+
       </div>
+
     </section>
 
   </main>
 
   <footer>
+
     <div class="container footer-content">
+
       <a class="logo" href="#">
         <span class="logo-icon"></span>
-        MEGA HACK V9
+        megahck
       </a>
 
-      <p>© 2026 Mega Hack V9</p>
+      <p>© 2026 megahck</p>
 
-      <div class="socials">
-        <a href="#" target="_blank">Discord</a>
-        <a href="#" target="_blank">Telegram</a>
-      </div>
     </div>
+
   </footer>
 
 </body>
