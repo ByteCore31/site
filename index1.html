@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Nexora — игровой помощник</title>
-  <meta name="description" content="Современный игровой помощник с удобным интерфейсом.">
+  <title>Mega Hack V9</title>
+  <meta name="description" content="Mega Hack V9 — игровой помощник.">
 
   <style>
     :root {
-      --background: #08090b;
+      --bg: #08090b;
       --panel: #101216;
-      --border: #262a32;
+      --border: #272b33;
       --text: #f5f7fb;
       --muted: #9298a6;
       --green: #b9ff38;
@@ -27,8 +27,8 @@
 
     body {
       margin: 0;
-      background: var(--background);
       color: var(--text);
+      background: var(--bg);
       font-family: Arial, Helvetica, sans-serif;
     }
 
@@ -48,13 +48,13 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(8, 9, 11, 0.85);
+      background: rgba(8, 9, 11, 0.88);
       border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(14px);
+      backdrop-filter: blur(15px);
     }
 
     nav {
-      height: 80px;
+      min-height: 80px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -63,17 +63,17 @@
     .logo {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 11px;
       font-weight: 900;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
     }
 
     .logo-icon {
       width: 19px;
       height: 19px;
       background: var(--green);
-      clip-path: polygon(50% 0, 100% 25%, 76% 100%, 24% 100%, 0 25%);
       box-shadow: 0 0 20px rgba(185, 255, 56, 0.5);
+      clip-path: polygon(50% 0, 100% 25%, 76% 100%, 24% 100%, 0 25%);
     }
 
     .menu {
@@ -96,15 +96,14 @@
       border: 1px solid #3a3f49;
       border-radius: 4px;
       font-size: 13px;
-      transition: 0.2s;
     }
 
     .header-button:hover {
-      border-color: var(--green);
       color: var(--green);
+      border-color: var(--green);
     }
 
-    /* Первый экран */
+    /* Главный экран */
 
     .hero {
       min-height: 760px;
@@ -115,18 +114,16 @@
 
     .label {
       color: #c5c9d1;
-      font-family: monospace;
-      font-size: 11px;
-      font-weight: bold;
+      font: bold 11px monospace;
       letter-spacing: 2px;
     }
 
     .label::before {
       content: "";
-      display: inline-block;
       width: 7px;
       height: 7px;
       margin-right: 10px;
+      display: inline-block;
       background: var(--green);
       box-shadow: 0 0 12px var(--green);
     }
@@ -145,7 +142,7 @@
       -webkit-text-stroke: 1px #717783;
     }
 
-    .hero-description {
+    .description {
       max-width: 510px;
       color: var(--muted);
       font-size: 17px;
@@ -170,27 +167,27 @@
       transition: 0.25s;
     }
 
-    .button-primary {
-      background: var(--green);
+    .primary-button {
       color: #0a0b0d;
-      box-shadow: 0 0 35px rgba(185, 255, 56, 0.12);
+      background: var(--green);
+      box-shadow: 0 0 35px rgba(185, 255, 56, 0.14);
     }
 
-    .button-primary:hover {
+    .primary-button:hover {
       transform: translateY(-3px);
-      box-shadow: 0 10px 35px rgba(185, 255, 56, 0.25);
+      box-shadow: 0 12px 35px rgba(185, 255, 56, 0.25);
     }
 
-    .button-secondary {
+    .secondary-button {
       border: 1px solid #343943;
     }
 
-    .button-secondary:hover {
-      border-color: var(--green);
+    .secondary-button:hover {
       color: var(--green);
+      border-color: var(--green);
     }
 
-    /* Декорация */
+    /* Неоновый шар */
 
     .decoration {
       width: 450px;
@@ -206,24 +203,23 @@
       height: 370px;
       position: absolute;
       border-radius: 50%;
-      background:
-        radial-gradient(
-          circle at 36% 30%,
-          #e1ffad,
-          #93ed27 22%,
-          #285f0b 57%,
-          #081104 72%
-        );
+      background: radial-gradient(
+        circle at 36% 30%,
+        #e1ffad,
+        #93ed27 22%,
+        #285f0b 57%,
+        #081104 72%
+      );
       box-shadow: 0 0 100px rgba(111, 216, 25, 0.22);
     }
 
     .control-panel {
-      width: 270px;
+      width: 280px;
       padding: 18px;
       position: absolute;
       top: 90px;
       right: 0;
-      background: rgba(16, 19, 25, 0.94);
+      background: rgba(16, 19, 25, 0.95);
       border: 1px solid #414a3a;
       transform: rotate(-3deg);
       box-shadow: 0 30px 70px black;
@@ -236,12 +232,12 @@
     }
 
     .panel-row {
-      display: flex;
-      justify-content: space-between;
       margin-top: 14px;
       padding-top: 14px;
-      border-top: 1px solid #2b2f36;
+      display: flex;
+      justify-content: space-between;
       color: #c7cbd3;
+      border-top: 1px solid #2b2f36;
       font-size: 12px;
     }
 
@@ -293,8 +289,8 @@
     }
 
     .stat span {
-      display: block;
       margin-top: 8px;
+      display: block;
       color: var(--muted);
       font-size: 10px;
       letter-spacing: 2px;
@@ -326,14 +322,13 @@
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 14px;
     }
 
     .card {
       min-height: 330px;
       padding: 25px;
-      position: relative;
       background: linear-gradient(145deg, #13161b, #0d0f12);
       border: 1px solid var(--border);
       transition: 0.25s;
@@ -425,55 +420,9 @@
       width: 100%;
     }
 
-    .price-note {
+    .note {
       color: #6c737e;
       font-size: 11px;
-    }
-
-    /* FAQ */
-
-    .faq {
-      padding: 120px 0;
-    }
-
-    .faq-item {
-      border-top: 1px solid var(--border);
-    }
-
-    .faq-item:last-child {
-      border-bottom: 1px solid var(--border);
-    }
-
-    .faq-question {
-      width: 100%;
-      padding: 25px 0;
-      display: flex;
-      justify-content: space-between;
-      color: white;
-      background: transparent;
-      border: 0;
-      cursor: pointer;
-      text-align: left;
-      font-size: 16px;
-      font-weight: bold;
-    }
-
-    .faq-question span {
-      color: var(--green);
-      font-size: 21px;
-    }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      color: var(--muted);
-      line-height: 1.7;
-      transition: max-height 0.3s ease;
-    }
-
-    .faq-item.active .faq-answer {
-      max-height: 150px;
-      padding-bottom: 25px;
     }
 
     /* Подвал */
@@ -559,16 +508,17 @@
     <nav class="container">
       <a class="logo" href="#">
         <span class="logo-icon"></span>
-        NEXORA
+        MEGA HACK V9
       </a>
 
       <div class="menu">
         <a href="#features">Возможности</a>
         <a href="#pricing">Цена</a>
-        <a href="#faq">FAQ</a>
       </div>
 
-      <a class="header-button" href="#pricing">Получить доступ</a>
+      <a class="header-button" href="#pricing">
+        Получить доступ
+      </a>
     </nav>
   </header>
 
@@ -576,24 +526,24 @@
 
     <section class="hero">
       <div class="container">
-        <div class="label">НОВАЯ ВЕРСИЯ 2.0</div>
+        <div class="label">MEGA HACK V9</div>
 
         <h1>
           ТВОЯ ИГРА.<br>
           <span>ТВОИ ПРАВИЛА.</span>
         </h1>
 
-        <p class="hero-description">
+        <p class="description">
           Современный игровой помощник с быстрым интерфейсом,
           гибкими настройками и мгновенным запуском.
         </p>
 
         <div class="buttons">
-          <a class="button button-primary" href="#pricing">
-            Купить за 499 ₽ &nbsp; ↗
+          <a class="button primary-button" href="ССЫЛКА_ПОКУПКИ">
+            Купить за 20 ₽ &nbsp; ↗
           </a>
 
-          <a class="button button-secondary" href="#features">
+          <a class="button secondary-button" href="#features">
             Узнать больше ↓
           </a>
         </div>
@@ -602,7 +552,7 @@
           <div class="orb"></div>
 
           <div class="control-panel">
-            <div class="panel-title">NEXORA // CONTROL</div>
+            <div class="panel-title">MEGA HACK V9 // CONTROL</div>
 
             <div class="panel-row">
               <span>Interface</span>
@@ -642,7 +592,7 @@
 
         <div class="stat">
           <strong>24/7</strong>
-          <span>доступ к обновлениям</span>
+          <span>доступ к покупке</span>
         </div>
       </div>
     </div>
@@ -656,37 +606,29 @@
       </h2>
 
       <div class="cards">
-
         <article class="card">
           <span class="card-number">01</span>
           <div class="card-icon">⌁</div>
+
           <h3>Точный контроль</h3>
+
           <p>
-            Настраивай игровой процесс под себя: горячие клавиши,
-            профили и быстрый доступ.
+            Настраивай игровой процесс под себя:
+            горячие клавиши, профили и быстрый доступ.
           </p>
         </article>
 
         <article class="card">
           <span class="card-number">02</span>
           <div class="card-icon">◇</div>
+
           <h3>Чистый интерфейс</h3>
+
           <p>
-            Компактное меню не перекрывает игру и остаётся
-            понятным с первого запуска.
+            Компактное меню не перекрывает игру
+            и остаётся понятным с первого запуска.
           </p>
         </article>
-
-        <article class="card">
-          <span class="card-number">03</span>
-          <div class="card-icon">↻</div>
-          <h3>Быстрые обновления</h3>
-          <p>
-            Новые версии устанавливаются автоматически,
-            а настройки сохраняются.
-          </p>
-        </article>
-
       </div>
     </section>
 
@@ -700,67 +642,25 @@
         </h2>
 
         <div class="price">
-          499 <small>₽</small>
+          20 <small>₽</small>
         </div>
 
         <ul class="advantages">
           <li>Все функции без ограничений</li>
-          <li>Будущие обновления бесплатно</li>
+          <li>Пожизненный доступ</li>
           <li>Поддержка пользователей</li>
         </ul>
 
-        <!-- Замени ссылку на свою страницу оплаты -->
         <a
-          class="button button-primary full-width"
-          href="https://example.com"
-          target="_blank"
+          class="button primary-button full-width"
+          href="ССЫЛКА_ПОКУПКИ"
         >
-          Получить Nexora &nbsp; ↗
+          Получить Mega Hack V9 &nbsp; ↗
         </a>
 
-        <p class="price-note">
+        <p class="note">
           Цифровой товар · Мгновенная доставка
         </p>
-      </div>
-    </section>
-
-    <section class="faq container" id="faq">
-      <div class="section-label">FAQ</div>
-      <h2 class="section-title">Частые вопросы</h2>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Как установить программу?
-          <span>+</span>
-        </button>
-
-        <div class="faq-answer">
-          После оплаты вы получите установщик и инструкцию.
-          Установка занимает несколько минут.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Подойдёт ли программа для моей версии игры?
-          <span>+</span>
-        </button>
-
-        <div class="faq-answer">
-          Перед покупкой проверьте список поддерживаемых версий
-          или напишите в поддержку.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">
-          Можно перенести лицензию на другой компьютер?
-          <span>+</span>
-        </button>
-
-        <div class="faq-answer">
-          Да, перенос лицензии доступен через поддержку.
-        </div>
       </div>
     </section>
 
@@ -770,31 +670,17 @@
     <div class="container footer-content">
       <a class="logo" href="#">
         <span class="logo-icon"></span>
-        NEXORA
+        MEGA HACK V9
       </a>
 
-      <p>© 2026 Nexora. Все права защищены.</p>
+      <p>© 2026 Mega Hack V9</p>
 
       <div class="socials">
-        <a href="https://discord.com" target="_blank">Discord</a>
-        <a href="https://t.me/username" target="_blank">Telegram</a>
+        <a href="#" target="_blank">Discord</a>
+        <a href="#" target="_blank">Telegram</a>
       </div>
     </div>
   </footer>
-
-  <script>
-    const questions = document.querySelectorAll(".faq-question");
-
-    questions.forEach((question) => {
-      question.addEventListener("click", () => {
-        const item = question.parentElement;
-        const icon = question.querySelector("span");
-
-        item.classList.toggle("active");
-        icon.textContent = item.classList.contains("active") ? "−" : "+";
-      });
-    });
-  </script>
 
 </body>
 </html>
